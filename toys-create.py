@@ -11,6 +11,7 @@ def create_toy(event, context):
 
     val = ToyValidator()
     errors = val.validate(event)
+    print('validate: {}'.format(errors))
     num_of_errors = len(errors)
 
     print('Creating toy - error count {}'.format(num_of_errors))
