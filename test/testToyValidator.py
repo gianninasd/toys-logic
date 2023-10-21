@@ -10,10 +10,11 @@ class TestToyValidator(unittest.TestCase):
 
   def test_AllGood(self):
     obj = {
+      'id': '',
       'name': 'Rick Hunter',
-      'model': 'Technic',
-      'pieces': '55',
-      'purchaseYear': '2020'
+      'model': '21321',
+      'pieces': 55,
+      'purchaseYear': 2020
     }
 
     errors = self.val.validate(obj)
@@ -28,9 +29,9 @@ class TestToyValidator(unittest.TestCase):
   def test_EmptyPieces(self):
     obj = {
       'name': 'Rick Hunter',
-      'model': 'Technic',
+      'model': '21321',
       'pieces': ' ',
-      'purchaseYear': '2020'
+      'purchaseYear': 2020
     }
 
     errors = self.val.validate(obj)
@@ -39,7 +40,7 @@ class TestToyValidator(unittest.TestCase):
   def test_NonNumericPieces(self):
     obj = {
       'name': 'Rick Hunter',
-      'model': 'Technic',
+      'model': '21321',
       'pieces': 'abc',
       'purchaseYear': '2020'
     }
@@ -50,9 +51,9 @@ class TestToyValidator(unittest.TestCase):
   def test_BadYear(self):
     obj = {
       'name': 'Rick Hunter',
-      'model': 'Technic',
+      'model': '21321',
       'pieces': 'abc',
-      'purchaseYear': '1981'
+      'purchaseYear': 1981
     }
 
     errors = self.val.validate(obj)
