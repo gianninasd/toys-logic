@@ -14,9 +14,9 @@ All downloaded 3rd party libraries can be found in `<python install dir>\Lib\sit
 
 ## Testing and packaging
 * To execute all unit tests, run: `python3 -m unittest discover -v -s test`
-* To generate the build archive, run: `xxx`
 * To manually generate the build archive, run: `zip build/toys.zip toys-*.py dg/Toy*.py`
 * To upload the archive to AWS, run: `aws lambda update-function-code --function-name $awsFunctionName --zip-file fileb://$buildDir/$zipFile`
+* Or manually upload via the AWS web console
 
 ## References
 * https://docs.aws.amazon.com/lambda/latest/dg/python-package.html
